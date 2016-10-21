@@ -65,6 +65,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             SKAction.sequence([ SKAction.run(addMonster),
                                 SKAction.wait(forDuration: 1.0) ])
         ))
+
+        let backgroundMusic = SKAudioNode(fileNamed: "background-music-aac.caf")
+        backgroundMusic.autoplayLooped = true
+        addChild(backgroundMusic)
     }
 
     func random() -> CGFloat {
@@ -102,6 +106,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+
+        run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
+
         guard let touch = touches.first else { return }
         let touchLocation = touch.location(in: self)
 
