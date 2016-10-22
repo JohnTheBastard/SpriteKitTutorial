@@ -5,6 +5,10 @@
 //  Created by John D Hearn on 10/20/16.
 //  Copyright © 2016 Bastardized Productions. All rights reserved.
 //
+//
+//  based on tutorial by Ray Wenderlich:
+//  https://www.raywenderlich.com/145318/spritekit-swift-3-tutorial-beginners
+//
 
 import SpriteKit
 import GameplayKit
