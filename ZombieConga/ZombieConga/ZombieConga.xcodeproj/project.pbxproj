@@ -13,6 +13,7 @@
 		F20992401DC4398700ECBA03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F209923E1DC4398700ECBA03 /* Main.storyboard */; };
 		F20992451DC4398700ECBA03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F20992431DC4398700ECBA03 /* LaunchScreen.storyboard */; };
 		F209924D1DC43D9800ECBA03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F209924C1DC43D9800ECBA03 /* Assets.xcassets */; };
+		F2A10C741DC7A0610099323F /* VectorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10C731DC7A0610099323F /* VectorUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F20992441DC4398700ECBA03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F20992461DC4398700ECBA03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F209924C1DC43D9800ECBA03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2A10C731DC7A0610099323F /* VectorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				F20992341DC4398700ECBA03 /* AppDelegate.swift */,
 				F209923A1DC4398700ECBA03 /* GameScene.swift */,
+				F2A10C731DC7A0610099323F /* VectorUtils.swift */,
 				F209923C1DC4398700ECBA03 /* GameViewController.swift */,
 				F209923E1DC4398700ECBA03 /* Main.storyboard */,
 				F20992431DC4398700ECBA03 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A10C741DC7A0610099323F /* VectorUtils.swift in Sources */,
 				F209923B1DC4398700ECBA03 /* GameScene.swift in Sources */,
 				F209923D1DC4398700ECBA03 /* GameViewController.swift in Sources */,
 				F20992351DC4398700ECBA03 /* AppDelegate.swift in Sources */,
@@ -306,6 +310,7 @@
 				F209924B1DC4398700ECBA03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
