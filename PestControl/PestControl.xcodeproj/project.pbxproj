@@ -30,6 +30,7 @@
 		F2A10CBF1DC814F50099323F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10CBE1DC814F50099323F /* Player.swift */; };
 		F2A10CC31DC829D20099323F /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10CC21DC829D20099323F /* Types.swift */; };
 		F2A10CC51DC82A370099323F /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10CC41DC82A370099323F /* Animatable.swift */; };
+		F2A10CC71DC830D80099323F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10CC61DC830D80099323F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,10 +55,11 @@
 		824441A01D3CA5A6005ECB76 /* SKTEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTEffects.swift; sourceTree = "<group>"; };
 		824441A11D3CA5A6005ECB76 /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
 		824441A21D3CA5A6005ECB76 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
-		F2A10CBB1DC80C5E0099323F /* TileSets.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileSets.sks; sourceTree = "<group>"; };
+		F2A10CBB1DC80C5E0099323F /* TileSets.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TileSets.sks; path = "/Users/jhearn/Documents/Dev/CF/401-ios/SpriteKitTutorial/PestControl/PestControl/TileSets.sks"; sourceTree = "<absolute>"; };
 		F2A10CBE1DC814F50099323F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Characters/Player.swift; sourceTree = "<group>"; };
 		F2A10CC21DC829D20099323F /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		F2A10CC41DC82A370099323F /* Animatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
+		F2A10CC61DC830D80099323F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				824441961D3CA5A6005ECB76 /* SKTUtils */,
 				824441721D3C5E8F005ECB76 /* AppDelegate.swift */,
 				F2A10CC21DC829D20099323F /* Types.swift */,
+				F2A10CC61DC830D80099323F /* Extensions.swift */,
 				8244417A1D3C5E8F005ECB76 /* GameViewController.swift */,
 				824441741D3C5E8F005ECB76 /* GameScene.sks */,
 				824441781D3C5E8F005ECB76 /* GameScene.swift */,
@@ -171,7 +174,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Razeware LLC";
 				TargetAttributes = {
 					8244416E1D3C5E8F005ECB76 = {
@@ -226,6 +229,7 @@
 				824441AC1D3CA5A6005ECB76 /* SKTEffects.swift in Sources */,
 				F2A10CBF1DC814F50099323F /* Player.swift in Sources */,
 				824441A81D3CA5A6005ECB76 /* SKAction+SpecialEffects.swift in Sources */,
+				F2A10CC71DC830D80099323F /* Extensions.swift in Sources */,
 				824441A51D3CA5A6005ECB76 /* CGVector+Extensions.swift in Sources */,
 				824441A71D3CA5A6005ECB76 /* SKAction+Extensions.swift in Sources */,
 				824441A91D3CA5A6005ECB76 /* SKColor+Extensions.swift in Sources */,
@@ -277,8 +281,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -300,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -325,8 +331,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -342,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
