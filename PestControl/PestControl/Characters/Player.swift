@@ -31,7 +31,9 @@ class Player: SKSpriteNode {
         physicsBody?.linearDamping = 0.5
         physicsBody?.friction = 0
         physicsBody?.allowsRotation = false
-
+        physicsBody?.categoryBitMask = PhysicsCategory.Player
+        physicsBody?.contactTestBitMask = PhysicsCategory.All
+      
         createAnimations(character: "player")
     }
 
