@@ -14,6 +14,7 @@ enum PlayerSettings {
 
 class Player: SKSpriteNode {
     var animations: [SKAction] = []
+    var hasBugspray: Bool = false
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("Use init()")

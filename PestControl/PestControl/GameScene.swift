@@ -7,9 +7,11 @@ import SpriteKit
 class GameScene: SKScene {
     var background: SKTileMapNode!
     var obstaclesTileMap: SKTileMapNode?
+    var bugsprayTileMap: SKTileMapNode?
     var player = Player()
-    //var bug = Bug()
+
     var bugsNode = SKNode()
+    var firebugCount:Int = 0
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -25,12 +27,21 @@ class GameScene: SKScene {
         setupWorldPhysics()
         createBugs()
         setupObstaclePhysics()
+        if firebugCount > 0 {
+            createBugspray(quantity: firebugCount+10)
+        }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         player.move(target: touch.location(in: self))
 
+    }
+
+    override func update(_ currentTime: TimeInterval) {
+        if !player.hasBugspray {
+            updateBugspray()
+        }
     }
 
     func setupCamera() {
@@ -62,6 +73,13 @@ class GameScene: SKScene {
                                       row: coordinates.row)
     }
 
+    func tileCoordinates(in tileMap: SKTileMapNode,
+                         at position: CGPoint) -> TileCoordinates {
+        let column = tileMap.tileColumnIndex(fromPosition: position)
+        let row = tileMap.tileRowIndex(fromPosition: position)
+        return (column, row)
+    }
+
     func createBugs() {
         guard let bugsMap = childNode(withName: "bugs") as? SKTileMapNode
             else { return }
@@ -70,7 +88,14 @@ class GameScene: SKScene {
               guard let tile = tile(in: bugsMap, at: (column, row) )
                     else { continue }
 
-                let bug = Bug()
+                //let bug = Bug()
+                let bug: Bug
+                if tile.userData?.object(forKey: "firebug") != nil {
+                  bug = Firebug()
+                  firebugCount += 1
+                } else {
+                  bug = Bug()
+                }
                 bug.position = bugsMap.centerOfTile(atColumn: column, row: row)
                 bugsNode.addChild(bug)
                 bug.move()
@@ -81,6 +106,40 @@ class GameScene: SKScene {
         bugsMap.removeFromParent()
     }
 
+    func createBugspray(quantity: Int) {
+        let tile = SKTileDefinition(texture:SKTexture(pixelImageNamed: "bugspray"))
+        let tilerule = SKTileGroupRule(adjacency:SKTileAdjacencyMask.adjacencyAll, tileDefinitions: [tile])
+        let tilegroup = SKTileGroup(rules: [tilerule])
+        let tileSet = SKTileSet(tileGroups: [tilegroup])
+
+
+        let columns = background.numberOfColumns
+        let rows = background.numberOfRows
+        bugsprayTileMap = SKTileMapNode(tileSet: tileSet,
+                                        columns: columns,
+                                           rows: rows,
+                                       tileSize: tile.size)
+        for _ in 1...quantity {
+            let column = Int.random(min: 0, max: columns-1)
+            let row = Int.random(min: 0, max: rows-1)
+            bugsprayTileMap?.setTileGroup(tilegroup,
+                                          forColumn: column,
+                                                row: row)
+        }
+
+        bugsprayTileMap?.name = "Bugspray"
+        addChild(bugsprayTileMap!)
+    }
+
+    func updateBugspray() {
+        guard let bugsprayTileMap = bugsprayTileMap else { return }
+        let (column, row) = tileCoordinates(in: bugsprayTileMap,
+                                            at: player.position)
+        if tile(in: bugsprayTileMap, at: (column, row)) != nil {
+            bugsprayTileMap.setTileGroup(nil, forColumn: column, row: row)
+            player.hasBugspray = true
+        }
+    }
 
     func setupObstaclePhysics(){
         guard let obstaclesTileMap = obstaclesTileMap else { return }

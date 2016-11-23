@@ -26,6 +26,7 @@
 		824441AC1D3CA5A6005ECB76 /* SKTEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824441A01D3CA5A6005ECB76 /* SKTEffects.swift */; };
 		824441AD1D3CA5A6005ECB76 /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824441A11D3CA5A6005ECB76 /* SKTTimingFunctions.swift */; };
 		824441AE1D3CA5A6005ECB76 /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824441A21D3CA5A6005ECB76 /* Vector3.swift */; };
+		F22617DE1DE54F9200A540D9 /* Firebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22617DD1DE54F9200A540D9 /* Firebug.swift */; };
 		F26A4E5B1DC98A2700A3C986 /* Bug.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26A4E5A1DC98A2700A3C986 /* Bug.swift */; };
 		F2A10CBC1DC80C5E0099323F /* TileSets.sks in Resources */ = {isa = PBXBuildFile; fileRef = F2A10CBB1DC80C5E0099323F /* TileSets.sks */; };
 		F2A10CBF1DC814F50099323F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A10CBE1DC814F50099323F /* Player.swift */; };
@@ -56,6 +57,7 @@
 		824441A01D3CA5A6005ECB76 /* SKTEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTEffects.swift; sourceTree = "<group>"; };
 		824441A11D3CA5A6005ECB76 /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
 		824441A21D3CA5A6005ECB76 /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
+		F22617DD1DE54F9200A540D9 /* Firebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Firebug.swift; path = Characters/Firebug.swift; sourceTree = "<group>"; };
 		F26A4E5A1DC98A2700A3C986 /* Bug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bug.swift; sourceTree = "<group>"; };
 		F2A10CBB1DC80C5E0099323F /* TileSets.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = TileSets.sks; path = "/Users/jhearn/Documents/Dev/CF/401-ios/SpriteKitTutorial/PestControl/PestControl/TileSets.sks"; sourceTree = "<absolute>"; };
 		F2A10CBE1DC814F50099323F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Characters/Player.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				F2A10CBE1DC814F50099323F /* Player.swift */,
 				F26A4E5A1DC98A2700A3C986 /* Bug.swift */,
 				F2A10CC41DC82A370099323F /* Animatable.swift */,
+				F22617DD1DE54F9200A540D9 /* Firebug.swift */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22617DE1DE54F9200A540D9 /* Firebug.swift in Sources */,
 				824441791D3C5E8F005ECB76 /* GameScene.swift in Sources */,
 				824441A41D3CA5A6005ECB76 /* CGPoint+Extensions.swift in Sources */,
 				824441AD1D3CA5A6005ECB76 /* SKTTimingFunctions.swift in Sources */,
